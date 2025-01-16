@@ -78,6 +78,42 @@ function DashboardPage() {
               </div>
             </div>
           </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+            <h3 style={{ margin: '0', color: '#fff' }}>Sensor Presencia de Agua</h3>
+            <div style={{ display: 'flex', gap: '10px' }}>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'conic-gradient(#1abc9c 0% 67%, #ecf0f1 67% 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
+                  <span style={{ color: '#000' }}>67%</span>
+                </div>
+                <div>MODULO 100</div>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'conic-gradient(#9b59b6 0% 46%, #ecf0f1 46% 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
+                  <span style={{ color: '#000' }}>46%</span>
+                </div>
+                <div>MODULO 200</div>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'conic-gradient(#f39c12 0% 15%, #ecf0f1 15% 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
+                  <span style={{ color: '#000' }}>15%</span>
+                </div>
+                <div>ATENCIÓN</div>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'conic-gradient(#e74c3c 0% 15%, #ecf0f1 15% 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
+                  <span style={{ color: '#000' }}>15%</span>
+                </div>
+                <div>CRITICO</div>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'conic-gradient(#e74c3c 0% 15%, #ecf0f1 15% 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
+                  <span style={{ color: '#000' }}>15%</span>
+                </div>
+                <div>CRITICO</div>
+              </div>
+            </div>
+          </div>
         </div>
         {/* Aquí puedes implementar otros componentes para el dashboard */}
       </div>
