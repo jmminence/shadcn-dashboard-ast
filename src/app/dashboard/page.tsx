@@ -46,9 +46,9 @@ function DashboardPage() {
         </button>
       </div>
       {/* Área principal del dashboard */}
-      <div style={{ flex: 1, padding: '20px' }}>
-        {/* Panel de Datos Generales */}
-        <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+      <div style={{ flex: 1, padding: '20px', display: 'flex', justifyContent: 'space-between' }}>
+        {/* Panel de Datos Generales y Gráficos */}
+        <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
           <div style={{ backgroundColor: '#333', color: '#fff', padding: '10px', borderRadius: '5px', maxWidth: '300px' }}>
             <h2 style={{ margin: '0 0 10px 0' }}>DATOS GENERALES</h2>
             <h3 style={{ margin: '0 0 10px 0' }}>EMPRESA</h3>
@@ -114,8 +114,22 @@ function DashboardPage() {
               </div>
             </div>
           </div>
+
+          {/* Alerta */}
+          <div style={{ backgroundColor: '#2c3e50', color: '#fff', padding: '15px', borderRadius: '8px', maxWidth: '250px', display: 'flex', alignItems: 'center', gap: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
+            <div style={{ fontSize: '24px' }}>🔔</div>
+            <div>
+              <div style={{ fontSize: '12px', color: '#bdc3c7' }}>hace 5 minutos</div>
+              <div style={{ fontSize: '14px', fontWeight: 'bold' }}>Sensor de Puerta 001 “Open”</div>
+              <div style={{ fontSize: '12px' }}>SALMONES-AUSTRAL</div>
+            </div>
+          </div>
         </div>
-        {/* Aquí puedes implementar otros componentes para el dashboard */}
+
+        {/* Panel del Mapa */}
+        <div style={{ width: '400px', height: '100%', backgroundColor: '#2c3e50', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
+          <img src="/images/mapa_ejemplo.png" alt="Mapa" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        </div>
       </div>
     </div>
   );
