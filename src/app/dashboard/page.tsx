@@ -47,8 +47,19 @@ function DashboardPage() {
       </div>
       {/* Área principal del dashboard */}
       <div style={{ flex: 1, padding: '20px' }}>
-        <h1>Dashboard</h1>
-        {/* Aquí puedes implementar tus componentes para el dashboard */}
+        {/* Panel de Datos Generales */}
+        <div style={{ backgroundColor: '#333', color: '#fff', padding: '10px', borderRadius: '5px', maxWidth: '300px' }}>
+          <h2 style={{ margin: '0 0 10px 0' }}>DATOS GENERALES</h2>
+          <h3 style={{ margin: '0 0 10px 0' }}>EMPRESA</h3>
+          <div style={{ backgroundColor: '#e74c3c', color: '#fff', padding: '5px', borderRadius: '5px', textAlign: 'center', marginBottom: '10px' }}>
+            Granja Marina Tornagaleones
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <span style={{ marginRight: '5px' }}>📍</span>
+            <span>X Los Lagos - Puerto Montt</span>
+          </div>
+        </div>
+        {/* Aquí puedes implementar otros componentes para el dashboard */}
       </div>
     </div>
   );
