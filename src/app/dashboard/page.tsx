@@ -48,15 +48,35 @@ function DashboardPage() {
       {/* Área principal del dashboard */}
       <div style={{ flex: 1, padding: '20px' }}>
         {/* Panel de Datos Generales */}
-        <div style={{ backgroundColor: '#333', color: '#fff', padding: '10px', borderRadius: '5px', maxWidth: '300px' }}>
-          <h2 style={{ margin: '0 0 10px 0' }}>DATOS GENERALES</h2>
-          <h3 style={{ margin: '0 0 10px 0' }}>EMPRESA</h3>
-          <div style={{ backgroundColor: '#e74c3c', color: '#fff', padding: '5px', borderRadius: '5px', textAlign: 'center', marginBottom: '10px' }}>
-            Granja Marina Tornagaleones
+        <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+          <div style={{ backgroundColor: '#333', color: '#fff', padding: '10px', borderRadius: '5px', maxWidth: '300px' }}>
+            <h2 style={{ margin: '0 0 10px 0' }}>DATOS GENERALES</h2>
+            <h3 style={{ margin: '0 0 10px 0' }}>EMPRESA</h3>
+            <div style={{ backgroundColor: '#e74c3c', color: '#fff', padding: '5px', borderRadius: '5px', textAlign: 'center', marginBottom: '10px' }}>
+              Granja Marina Tornagaleones
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <span style={{ marginRight: '5px' }}>📍</span>
+              <span>X Los Lagos - Puerto Montt</span>
+            </div>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <span style={{ marginRight: '5px' }}>📍</span>
-            <span>X Los Lagos - Puerto Montt</span>
+
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+            <h3 style={{ margin: '0', color: '#fff' }}>Tiempo de alerta</h3>
+            <div style={{ display: 'flex', gap: '20px' }}>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ width: '100px', height: '100px', borderRadius: '50%', background: 'conic-gradient(#8e44ad 0% 72%, #ecf0f1 72% 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
+                  <span style={{ color: '#000' }}>72%</span>
+                </div>
+                <div>PONTON</div>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ width: '100px', height: '100px', borderRadius: '50%', background: 'conic-gradient(#f39c12 0% 57%, #ecf0f1 57% 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
+                  <span style={{ color: '#000' }}>57%</span>
+                </div>
+                <div>MODULO</div>
+              </div>
+            </div>
           </div>
         </div>
         {/* Aquí puedes implementar otros componentes para el dashboard */}
