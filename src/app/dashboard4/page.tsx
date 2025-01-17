@@ -33,7 +33,7 @@ const dataModulos = {
 
 function DashboardPage3() {
   return (
-    <div style={{ display: 'flex', height: '100vh' }}>
+    <div style={{ display: 'flex', height: '100vh', backgroundColor: '#1a1a1a' }}>
       {/* Menú lateral */}
       <div style={{ width: '60px', backgroundColor: '#333', color: '#fff', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '10px 0' }}>
         <button style={{ background: 'none', border: 'none', color: 'inherit', marginBottom: '20px' }}>
@@ -121,16 +121,16 @@ function DashboardPage3() {
           </div>
         </div>
 
-        {/* Gráficos */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', marginBottom: '20px' }}>
-          <div style={{ backgroundColor: '#444', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', textAlign: 'center' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#fff' }}>Actividad Última Hora Pontones</h3>
-            <Bar data={dataPontones} options={{ responsive: true, plugins: { legend: { position: 'top' }, title: { display: true, text: 'Actividad Última Hora Pontones' } } }} />
-          </div>
-          <div style={{ backgroundColor: '#444', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', textAlign: 'center' }}>
-            <h3 style={{ margin: '0 0 10px 0', color: '#fff' }}>Actividad Última Hora Módulos</h3>
-            <Bar data={dataModulos} options={{ responsive: true, plugins: { legend: { position: 'top' }, title: { display: true, text: 'Actividad Última Hora Módulos' } } }} />
-          </div>
+        {/* Cámaras de Seguridad */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px', marginBottom: '20px' }}>
+          {Array.from({ length: 8 }).map((_, index) => (
+            <div key={index} style={{ backgroundColor: '#4b0082', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', textAlign: 'center' }}>
+              <h3 style={{ margin: '0 0 10px 0', color: '#fff' }}>Cámara {index + 1}</h3>
+              <div style={{ width: '100%', height: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#4b0082', borderRadius: '8px' }}>
+                <span style={{ fontSize: '50px', color: '#fff' }}>📹</span>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Tabla de Datos */}
@@ -155,10 +155,7 @@ function DashboardPage3() {
                 { id: 4, empresa: 'MOWI', centro: 'ISLA LOLA', fecha: '04/09/2023 14:30', alerta: 'SENSOR DE AGUA', estado: '✔️', obs: '🔍' },
                 { id: 5, empresa: 'MOWI', centro: 'ISLA LOLA', fecha: '04/09/2023 14:30', alerta: 'SENSOR DE AGUA', estado: '✔️', obs: '🔍' },
                 { id: 6, empresa: 'MOWI', centro: 'ISLA LOLA', fecha: '04/09/2023 14:30', alerta: 'SENSOR DE AGUA', estado: '✔️', obs: '🔍' },
-                { id: 7, empresa: 'MOWI', centro: 'ISLA LOLA', fecha: '04/09/2023 14:30', alerta: 'SENSOR DE AGUA', estado: '✔️', obs: '🔍' },
-                { id: 8, empresa: 'MOWI', centro: 'ISLA LOLA', fecha: '04/09/2023 14:30', alerta: 'SENSOR DE AGUA', estado: '✔️', obs: '🔍' },
-                { id: 9, empresa: 'MOWI', centro: 'ISLA LOLA', fecha: '04/09/2023 14:30', alerta: 'SENSOR DE AGUA', estado: '✔️', obs: '🔍' },
-              ].map((row, index) => (
+                ].map((row, index) => (
                 <tr key={index}>
                   <td style={{ padding: '5px', borderBottom: '1px solid #555', textAlign: 'center' }}>{row.id}</td>
                   <td style={{ padding: '5px', borderBottom: '1px solid #555', textAlign: 'center' }}>{row.empresa}</td>
@@ -174,9 +171,27 @@ function DashboardPage3() {
         </div>
       </div>
 
-      {/* Panel del Mapa */}
-      <div style={{ width: '400px', height: '100%', backgroundColor: '#2c3e50', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', marginLeft: '20px' }}>
-        <img src="/images/mapa_ejemplo.png" alt="Mapa" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      {/* Panel de Silos */}
+      <div style={{ width: '400px', height: '100%', backgroundColor: '#0000', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', marginLeft: '20px', padding: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ display: '-ms-inline-grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '70px' }}>
+          {[
+            { label: 'Silo 1 - A', color: 'green' },
+            { label: 'Silo 2 - A', color: 'green' },
+            { label: 'Silo 3 - A', color: 'yellow' },
+            { label: 'Silo 4 - A', color: 'green' },
+            { label: 'Silo 1 - B', color: 'green' },
+            { label: 'Silo 2 - B', color: 'green' },
+            { label: 'Silo 3 - B', color: 'red' },
+            { label: 'Silo 4 - B', color: 'green' },
+          ].map((silo, index) => (
+            <div key={index} style={{ textAlign: 'center', color: '#fff' }}>
+              <h4>{silo.label}</h4>
+              <div style={{ width: '80px', height: '120px', backgroundColor: '#333', borderRadius: '5px', position: 'relative', margin: '0 auto' }}>
+                <div style={{ width: '100%', height: '50%', backgroundColor: silo.color, position: 'absolute', bottom: 0, borderRadius: '0 0 5px 5px' }}></div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
