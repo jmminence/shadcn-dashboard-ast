@@ -1,13 +1,13 @@
 import React from 'react';
-import { FaHome, FaUser, FaCog, FaFish, FaCloud, FaSatellite, FaBatteryFull, FaBatteryEmpty, FaPills, FaBatteryQuarter, FaBroadcastTower, FaWifi, FaPrescription, FaExclamation, FaServer,} from 'react-icons/fa'; // Asegúrate de tener react-icons instalado
+import { FaHome, FaUser, FaCog, FaFish, FaCloud, FaBroadcastTower, FaWifi, FaExclamation, FaServer } from 'react-icons/fa';
 import { FaBots, FaShield } from 'react-icons/fa6';
-import { FcChargeBattery, FcLowBattery } from 'react-icons/fc';
+import { FcLowBattery } from 'react-icons/fc';
 
 function DashboardPage() {
   return (
     <div style={{ display: 'flex', height: '100vh' }}>
       {/* Menú lateral */}
-      <div style={{ width: '60px', backgroundColor: '#333', color: '#fff', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '10px 0' }}>       
+      <div style={{ width: '60px', backgroundColor: '#333', color: '#fff', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '10px 0' }}>
         <button style={{ background: 'none', border: 'none', color: 'inherit', marginBottom: '20px' }}>
           <FaHome size={20} />
         </button>
@@ -18,38 +18,38 @@ function DashboardPage() {
           <FaCloud size={20} />
         </button>
         <button style={{ background: 'none', border: 'none', color: 'inherit', marginBottom: '20px' }}>
-            <FaShield size={20} />
+          <FaShield size={20} />
         </button>
         <button style={{ background: 'none', border: 'none', color: 'inherit', marginBottom: '20px' }}>
-            <FaBroadcastTower size={20} />
+          <FaBroadcastTower size={20} />
         </button>
         <button style={{ background: 'none', border: 'none', color: 'inherit', marginBottom: '20px' }}>
-            <FcLowBattery size={20} />
+          <FcLowBattery size={20} />
         </button>
         <button style={{ background: 'none', border: 'none', color: 'inherit', marginBottom: '20px' }}>
-            <FaUser size={20} />
+          <FaUser size={20} />
         </button>
         <button style={{ background: 'none', border: 'none', color: 'inherit', marginBottom: '20px' }}>
-            <FaWifi size={20} />
+          <FaWifi size={20} />
         </button>
         <button style={{ background: 'none', border: 'none', color: 'inherit', marginBottom: '20px' }}>
-            <FaExclamation size={20} />
+          <FaExclamation size={20} />
         </button>
         <button style={{ background: 'none', border: 'none', color: 'inherit', marginBottom: '20px' }}>
-            <FaBots size={20} />
+          <FaBots size={20} />
         </button>
         <button style={{ background: 'none', border: 'none', color: 'inherit', marginBottom: '20px' }}>
-            <FaServer size={20} />
+          <FaServer size={20} />
         </button>
         <button style={{ background: 'none', border: 'none', color: 'inherit', marginBottom: '20px' }}>
-            <FaCog size={20} />
+          <FaCog size={20} />
         </button>
       </div>
       {/* Área principal del dashboard */}
       <div style={{ flex: 1, padding: '20px', display: 'flex', justifyContent: 'space-between' }}>
-        {/* Panel de Datos Generales y Gráficos */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'flex-start', flex: 1 }}>
-          <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          {/* Panel de Datos Generales y Gráficos */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
             {/* Datos Generales */}
             <div style={{ backgroundColor: '#333', color: '#fff', padding: '10px', borderRadius: '5px', maxWidth: '300px' }}>
               <h2 style={{ margin: '0 0 10px 0' }}>DATOS GENERALES</h2>
@@ -115,25 +115,23 @@ function DashboardPage() {
           </div>
 
           {/* Sensores */}
-          <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '30px', marginTop: '20px' }}>
-              {['Puerta', 'Silos', 'Humo', 'Fuga de Agua', 'Combustible', 'Nivel Agua', 'Luz', 'Co2', 'Gps', 'Sonda CTD', 'Movimiento', 'Energía'].map((sensor, index) => (
-                <div key={index} style={{ backgroundColor: '#444', color: '#fff', borderRadius: '8px', padding: '20px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)'}}>
-                  <div style={{ fontSize: '16px', fontWeight: 'bold' }}>Sensor de {sensor}</div>
-                  <div style={{ fontSize: '12px', color: '#ccc' }}>This week</div>
-                  <div style={{ fontSize: '24px', margin: '10px 0' }}>1,368</div>
-                  <div style={{ fontSize: '12px', color: '#76ff03' }}>0.43% ↑</div>
-                  <div style={{ height: '4px', backgroundColor: '#555', borderRadius: '2px', overflow: 'hidden', marginTop: '10px' }}>
-                    <div style={{ width: '50%', height: '100%', backgroundColor: '#76ff03' }}></div>
-                  </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px', marginBottom: '20px' }}>
+            {['Puerta', 'Silos', 'Humo', 'Fuga de Agua', 'Combustible', 'Nivel Agua', 'Luz', 'Co2', 'Gps', 'Sonda CTD', 'Movimiento', 'Energía'].map((sensor, index) => (
+              <div key={index} style={{ backgroundColor: '#444', color: '#fff', borderRadius: '8px', padding: '20px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}>
+                <div style={{ fontSize: '16px', fontWeight: 'bold' }}>Sensor de {sensor}</div>
+                <div style={{ fontSize: '12px', color: '#ccc' }}>Esta semana</div>
+                <div style={{ fontSize: '24px', margin: '10px 0' }}>1,368</div>
+                <div style={{ fontSize: '12px', color: '#76ff03' }}>0.43% ↑</div>
+                <div style={{ height: '4px', backgroundColor: '#555', borderRadius: '2px', overflow: 'hidden', marginTop: '10px' }}>
+                  <div style={{ width: '50%', height: '100%', backgroundColor: '#76ff03' }}></div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Panel del Mapa */}
-        <div style={{ width: '400px', height: '100%', backgroundColor: '#2c3e50', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
+        <div style={{ width: '400px', height: '100%', backgroundColor: '#2c3e50', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', marginLeft: '20px' }}>
           <img src="/images/mapa_ejemplo.png" alt="Mapa" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
       </div>
